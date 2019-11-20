@@ -10,7 +10,7 @@ export default function Header() {
             <CssBaseline/>
             <Container maxWidth="lg">
                 <Typography variant="h1" component="h2" gutterBottom>
-                    Instant <AccessTimeIcon/>
+                    Timestamp.fyi <AccessTimeIcon/>
                 </Typography>
                 <Typography gutterBottom>
                     Date and Timestamp conversion tools
