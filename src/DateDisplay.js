@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
         title: {
             marginLeft: theme.spacing(4),
             marginRight: theme.spacing(4),
+            fontFamily: 'BlinkMacSystemFont'
         },
         container: {
             display: 'flex',
