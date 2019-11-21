@@ -3,7 +3,7 @@ import {createStyles, makeStyles, Theme} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import FileCopyIcon from '@material-ui/icons/FileCopy';
+import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
 import 'moment-timezone';
@@ -158,7 +158,7 @@ export default function TimestampDisplay(props) {
                     <Link component="button" variant="body2" title="Copy timestamp">
                     <CopyToClipboard text={ts}
                                      onCopy={() => setCopied(true)}>
-                        <FileCopyIcon fontSize='small'/>
+                        <FileCopyOutlinedIcon color={"secondary"} fontSize='small'/>
                     </CopyToClipboard>
                     </Link>
                     {copied && (

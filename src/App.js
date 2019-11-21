@@ -6,6 +6,13 @@ import Header from "./Header";
 import Divider from "@material-ui/core/Divider";
 import TimestampDisplay from "./TimestampDisplay";
 import DateDisplay from "./DateDisplay";
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+    palette: {
+        type: "dark"
+    }
+});
 
 class App extends React.Component {
     constructor(props) {
@@ -23,6 +30,7 @@ class App extends React.Component {
 
     render() {
         return (
+            <ThemeProvider theme={theme}>
             <Container>
                 <Header/>
                 <Divider/>
@@ -31,6 +39,7 @@ class App extends React.Component {
                 <br/>
                 <DateDisplay/>
             </Container>
+            </ThemeProvider>
         )
     }
 }
