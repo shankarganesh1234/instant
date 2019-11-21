@@ -5,9 +5,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
-import Moment from "react-moment";
-import 'moment-timezone';
 import MomentJS from 'moment';
+import 'moment-timezone';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -17,7 +16,8 @@ const useStyles = makeStyles((theme: Theme) =>
         title: {
             marginLeft: theme.spacing(4),
             marginRight: theme.spacing(4),
-            fontFamily: 'BlinkMacSystemFont'
+            fontFamily: 'BlinkMacSystemFont',
+            fontWeight: 'bold'
         },
         container: {
             display: 'flex',
@@ -32,19 +32,19 @@ const useStyles = makeStyles((theme: Theme) =>
 
 
 export default function DateDisplay() {
+    const initialDt = 946799999000;
+    const initialTs = MomentJS(initialDt).format("YYYY-MM-DD HH:mm:ss");
     const classes = useStyles();
-    const [ts, setTs] = useState(Date.now()/1000 | 0 );
-    const [tsInputField, setTsInputField] = useState(MomentJS.valueOf());
+    const [ts, setTs] = useState(initialTs);
+    debugger
+    const [tsInputField, setTsInputField] = useState(946799999000);
 
     function handleTsChange(e) {
-        let numberOfdigits = e.target.value.toString().length;
         let num = e.target.value;
-        // milliseconds
-        if(numberOfdigits === 13) {
-            num = num/1000;
-        }
-        setTsInputField(e.target.value);
-        setTs(num);
+        let d = MomentJS(parseInt(num, 10)).format("YYYY-MM-DD HH:mm:ss");
+        debugger
+        setTsInputField(num);
+        setTs(d);
     }
 
     return (
@@ -54,7 +54,7 @@ export default function DateDisplay() {
                     <form className={classes.container} noValidate autoComplete="off">
                         <TextField
                             id="standard-number"
-                            label="Unix timestamp seconds or milliseconds"
+                            label="Unix timestamp milliseconds"
                             type="number"
                             value={tsInputField}
                             onChange={handleTsChange}
@@ -70,7 +70,7 @@ export default function DateDisplay() {
                     Date and Time (UTC)
                 </Typography>
                 <Typography variant="h5" component="h2" className={classes.title}>
-                    <Moment unix tz="utc" format="YYYY/MM/DD h:mm:ss a">{ts}</Moment>
+                    {ts}
                 </Typography>
             </CardContent>
         </Card>

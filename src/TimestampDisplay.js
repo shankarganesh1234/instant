@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme: Theme) =>
         title: {
             marginLeft: theme.spacing(4),
             marginRight: theme.spacing(4),
-            fontFamily: 'BlinkMacSystemFont'
+            fontFamily: 'BlinkMacSystemFont',
+            fontWeight: 'bold'
         },
         container: {
             display: 'flex',
@@ -34,15 +35,15 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function TimestampDisplay(props) {
     const classes = useStyles();
-    const dateObj = new Date();
+    const [year, setYear] = useState(2000);
+    const [month, setMonth] = useState(1);
+    const [day, setDay] = useState(1);
+    const [hour, setHour] = useState(23);
+    const [minute, setMinute] = useState(59);
+    const [second, setSecond] = useState(59);
 
-    const [year, setYear] = useState(dateObj.getUTCFullYear());
-    const [month, setMonth] = useState(dateObj.getUTCMonth() + 1);
-    const [day, setDay] = useState(dateObj.getUTCDate());
-    const [hour, setHour] = useState(dateObj.getUTCHours());
-    const [minute, setMinute] = useState(dateObj.getUTCMinutes());
-    const [second, setSecond] = useState(dateObj.getUTCSeconds());
-    const [ts, setTs] = useState(dateObj.getTime());
+    let m = (2000 + '-' + 1 + '-' + 1 + ' ' + 23 + ':' + 59 + ':' + 59).toString();
+    const [ts, setTs] = useState(Moment(m, "YYYY-MM-DD HH:mm:ss").valueOf());
     const [copied, setCopied] = useState(false);
 
     function handleChange(e, name) {
@@ -170,3 +171,4 @@ export default function TimestampDisplay(props) {
         </Card>
     );
 }
+

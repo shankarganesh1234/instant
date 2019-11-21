@@ -9,7 +9,8 @@ export default function Header() {
         <React.Fragment>
             <CssBaseline/>
             <Container maxWidth="lg">
-                <Typography variant="h1" component="h2" gutterBottom>
+                <br/>
+                <Typography variant="h2" component="h2" gutterBottom>
                     Timestamp.fyi <AccessTimeIcon/>
                 </Typography>
                 <Typography gutterBottom>
