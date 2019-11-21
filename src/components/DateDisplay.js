@@ -58,6 +58,7 @@ export default function DateDisplay() {
                             type="number"
                             value={tsInputField}
                             onChange={handleTsChange}
+                            color={"secondary"}
                             className={classes.textField}
                             InputLabelProps={{
                                 shrink: true,

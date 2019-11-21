@@ -79,6 +79,7 @@ export default function TimestampDisplay(props) {
                             label="Year - yyyy"
                             value={year}
                             type="number"
+                            color={"secondary"}
                             className={classes.textField}
                             onChange={(e) => handleChange(e, 'year')}
                             InputLabelProps={{
@@ -91,6 +92,7 @@ export default function TimestampDisplay(props) {
                             label="Month - 1-12"
                             value={month}
                             type="number"
+                            color={"secondary"}
                             className={classes.textField}
                             onChange={(e) => handleChange(e, 'month')}
                             InputLabelProps={{
@@ -103,6 +105,7 @@ export default function TimestampDisplay(props) {
                             label="Day - 1-31"
                             value={day}
                             type="number"
+                            color={"secondary"}
                             className={classes.textField}
                             onChange={(e) => handleChange(e, 'day')}
                             InputLabelProps={{
@@ -115,6 +118,7 @@ export default function TimestampDisplay(props) {
                             label="Hour - hh (0-23)"
                             value={hour}
                             type="number"
+                            color={"secondary"}
                             className={classes.textField}
                             onChange={(e) => handleChange(e, 'hour')}
                             InputLabelProps={{
@@ -127,6 +131,7 @@ export default function TimestampDisplay(props) {
                             label="Minute - mm (0-59)"
                             value={minute}
                             type="number"
+                            color={"secondary"}
                             className={classes.textField}
                             onChange={(e) => handleChange(e, 'minute')}
                             InputLabelProps={{
@@ -139,6 +144,7 @@ export default function TimestampDisplay(props) {
                             label="Second - ss (0-59)"
                             value={second}
                             type="number"
+                            color={"secondary"}
                             className={classes.textField}
                             onChange={(e) => handleChange(e, 'second')}
                             InputLabelProps={{

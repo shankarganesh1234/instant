@@ -2,10 +2,10 @@ import React from 'react';
 import 'typeface-roboto';
 import './App.css';
 import Container from "@material-ui/core/Container";
-import Header from "./Header";
+import Header from "./components/Header";
 import Divider from "@material-ui/core/Divider";
-import TimestampDisplay from "./TimestampDisplay";
-import DateDisplay from "./DateDisplay";
+import TimestampDisplay from "./components/TimestampDisplay";
+import DateDisplay from "./components/DateDisplay";
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
