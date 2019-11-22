@@ -2,15 +2,16 @@ import React from 'react';
 import 'typeface-roboto';
 import './App.css';
 import Container from "@material-ui/core/Container";
-import Header from "./components/Header";
 import Divider from "@material-ui/core/Divider";
 import TimestampDisplay from "./components/TimestampDisplay";
 import DateDisplay from "./components/DateDisplay";
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Header from "./components/Header";
 
 const theme = createMuiTheme({
     palette: {
-        type: "dark"
+        type: "light"
     }
 });
 
@@ -31,8 +32,9 @@ class App extends React.Component {
     render() {
         return (
             <ThemeProvider theme={theme}>
-            <Container>
+                <CssBaseline/>
                 <Header/>
+            <Container>
                 <Divider/>
                 <br/>
                 <TimestampDisplay/>
