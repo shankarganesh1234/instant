@@ -36,7 +36,6 @@ export default function Header() {
                     <Typography variant="subtitle2" className={classes.title}>
                         &nbsp;&nbsp;&nbsp;&nbsp;Date and timestamp conversion tools
                     </Typography>
-                    <Link href={"https://github.com/shankarganesh1234/instant"} color="inherit" target={"_blank"}><GitHubIcon/></Link>
                 </Toolbar>
             </AppBar>
         </div>
