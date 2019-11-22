@@ -34,7 +34,7 @@ export default function Header() {
                         Timestamp.fyi
                     </Typography>
                     <Typography variant="subtitle2" className={classes.title}>
-                        &nbsp;&nbsp;&nbsp;&nbsp;Date and timestamp conversion tools
+                        &nbsp;&nbsp;&nbsp;&nbsp;Tools for date and timestamp conversion
                     </Typography>
                 </Toolbar>
             </AppBar>
